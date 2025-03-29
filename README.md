@@ -49,3 +49,5 @@ curl --location --request PUT 'http://localhost:5000/api/beds/67e7d959dda27465dc
 }'
 
 API Hosted Link - https://hospitalbackendserver.onrender.com
+
+Hosted url - https://hospitalbackendserver.onrender.com
