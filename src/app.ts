@@ -1,8 +1,8 @@
-import express, { Request, Response, NextFunction } from 'express';
-import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-import userRoutes from './routes/userRoutes';
+import express, { NextFunction, Request, Response } from 'express';
 import { connectDB } from './config/db';
+import bedsRoutes from './routes/bedsRoutes';
+import userRoutes from './routes/userRoutes';
 
 // Load environment variables
 dotenv.config();
@@ -18,6 +18,7 @@ app.use(express.json());
 
 // User Routes
 app.use('/api', userRoutes);
+app.use('/api/beds', bedsRoutes);
 
 // Global error handling middleware
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {

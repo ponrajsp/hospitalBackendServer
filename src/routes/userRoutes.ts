@@ -2,10 +2,10 @@ import { Router } from 'express';
 import { registerUser } from '../controllers/userController';
 import { loginUser } from '../controllers/loginController';
 
-const router = Router();
+const userRoutes = Router();
 
 // Register user route
-router.post('/userRegister', async (req, res) => {
+userRoutes.post('/userRegister', async (req, res) => {
   try {
     await registerUser(req, res);
   } catch (error) {
@@ -14,7 +14,7 @@ router.post('/userRegister', async (req, res) => {
 });
 
 // Login route
-router.post('/userLogin', async (req, res) => {
+userRoutes.post('/userLogin', async (req, res) => {
   try {
     await loginUser(req, res);
   } catch (error) {
@@ -22,4 +22,4 @@ router.post('/userLogin', async (req, res) => {
   }
 });
 
-export default router;
+export default userRoutes;
