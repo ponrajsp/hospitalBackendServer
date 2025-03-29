@@ -4,7 +4,7 @@ import { Schema, model, Document } from 'mongoose';
 interface User extends Document {
   firstName: string,
   lastName: string,
-  emailId: string;
+  email: string;
   password: string;
   type: string
 }
@@ -12,7 +12,7 @@ interface User extends Document {
 const userSchema = new Schema<User>({
   firstName: { type: String, required: true },
   lastName: { type: String, required: true },
-  emailId: { type: String, required: true },
+  email: { type: String, required: true },
   password: { type: String, required: true },
   type: { type: String, required: true },
 });

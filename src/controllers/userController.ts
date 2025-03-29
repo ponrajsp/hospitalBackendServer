@@ -4,10 +4,10 @@ import { UserModel } from '../models/User';
 import jwt from 'jsonwebtoken';
 export const registerUser = async (req: Request, res: Response): Promise<Response> => {
   try {
-    const { firstName, lastName, emailId, password, type } = req.body;
+    const { firstName, lastName, email, password, type } = req.body;
     
     // Check if the username already exists in the database
-    const existingUser = await UserModel.findOne({ emailId });
+    const existingUser = await UserModel.findOne({ email });
     if (existingUser) {
       return res.status(400).json({ message: 'Username already taken' });
     }
@@ -19,7 +19,7 @@ export const registerUser = async (req: Request, res: Response): Promise<Respons
     const newUser = new UserModel({
       firstName,
       lastName,
-      emailId,
+      email,
       type,
       password: hashedPassword,
     });
@@ -53,7 +53,7 @@ export const loginUser = async (req: Request, res: Response): Promise<Response> 
     const payload = {
       user: {
         id: user._id,
-        username: user.emailId
+        username: user.email
       }
     };
 

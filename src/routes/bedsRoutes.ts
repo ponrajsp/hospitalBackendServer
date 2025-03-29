@@ -27,6 +27,7 @@ bedsRoutes.put('/:id', async (req, res) => {
     try {
       await updateBed(req, res);
     } catch (error) {
+      console.log(error)
       res.status(500).json({ message: 'Something went wrong' });
     }
 });
