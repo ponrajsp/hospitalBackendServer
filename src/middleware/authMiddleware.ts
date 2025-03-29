@@ -1,5 +1,4 @@
-import { Request, Response, NextFunction } from 'express';
-import jwt from 'jsonwebtoken';
+import { NextFunction, Request, Response } from 'express';
 
 // Define an interface for the decoded JWT payload
 interface JwtPayload {

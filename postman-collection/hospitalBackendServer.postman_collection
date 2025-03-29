@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "e1d655e9-db8e-45fc-a1eb-ab5fad41a224",
+		"name": "HCL Hackathon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5544862"
+	},
+	"item": [
+		{
+			"name": "/userRegister",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"mockfirstname\",\r\n  \"lastName\": \"mocklastname\",\r\n  \"email\": \"mock@gmail.com\",\r\n  \"password\": \"password123\",\r\n  \"type\":\"doctor\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/userRegister",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"userRegister"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'http://localhost:5000/api/userRegister' \\\r\n--header 'Content-Type: application/json' \\\r\n--data-raw '{\r\n  \"firstName\": \"cdc  test 22\",\r\n  \"lastName\": \"hcl\",\r\n  \"email\": \"cdcdcdc@gmail.com\",\r\n  \"password\": \"password123\",\r\n  \"type\":\"doctor\"\r\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "/userLogin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"mock@gmail.com\",\r\n    \"password\": \"password123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/userLogin",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"userLogin"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'http://localhost:5000/api/userLogin' \\\r\n--header 'Content-Type: application/json' \\\r\n--data-raw '{\r\n  \"emailId\": \"test@gmail.com\",\r\n  \"password\": \"password123\"\r\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "/beds",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Bed AA10\",\r\n  \"status\": \"occupied\",\r\n  \"type\": \"General\",\r\n  \"createdDate\": \"2025-03-29T10:30:00Z\",\r\n  \"updatedDate\": \"2025-03-29T10:30:00Z\",\r\n  \"createdBy\": \"adminUser\",\r\n  \"updatedBy\": \"adminUser\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/beds",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"beds"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'http://localhost:5000/api/beds' \\\r\n--header 'Content-Type: application/json' \\\r\n--data '{\r\n  \"name\": \"Bed AA10\",\r\n  \"status\": \"occupied\",\r\n  \"type\": \"General\",\r\n  \"createdDate\": \"2025-03-29T10:30:00Z\",\r\n  \"updatedDate\": \"2025-03-29T10:30:00Z\",\r\n  \"createdBy\": \"adminUser\",\r\n  \"updatedBy\": \"adminUser\"\r\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "/beds",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/beds",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"beds"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'http://localhost:5000/api/beds'"
+			},
+			"response": []
+		},
+		{
+			"name": "/beds",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Bed AA10\",\r\n  \"status\": \"reserved\",\r\n  \"type\": \"General\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/beds/67e81aba4c2640c99eb01706",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"beds",
+						"67e81aba4c2640c99eb01706"
+					]
+				},
+				"description": "Generated from cURL: curl --location --request PUT 'http://localhost:5000/api/beds/67e7d959dda27465dc888550' \\\r\n--header 'Content-Type: application/json' \\\r\n--data '{\r\n  \"name\": \"Bed A102\",\r\n  \"status\": \"reee\",\r\n  \"type\": \"ICU\",\r\n  \"updatedBy\": \"adminUser\"\r\n}'"
+			},
+			"response": []
+		}
+	]
+}

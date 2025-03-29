@@ -4,6 +4,7 @@ import { connectDB } from './config/db';
 import bedsRoutes from './routes/bedsRoutes';
 import userRoutes from './routes/userRoutes';
 import cors from 'cors';
+
 // Load environment variables
 dotenv.config();
 
@@ -15,15 +16,6 @@ const app = express();
 
 // Middleware
 app.use(express.json());
-app.use(cors());
-
-
-const corsOptions = {
-  origin: 'http://localhost:3000/', // Replace with your frontend URL
-  methods: ['GET', 'POST'],
-  allowedHeaders: ['Content-Type'],
-};
-
 app.use(cors());
 
 // User Routes
