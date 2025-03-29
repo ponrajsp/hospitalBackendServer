@@ -19,12 +19,12 @@ app.use(cors());
 
 
 const corsOptions = {
-  origin: 'http://localhost:3000', // Replace with your frontend URL
+  origin: 'http://localhost:3000/', // Replace with your frontend URL
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type'],
 };
 
-app.use(cors(corsOptions));
+app.use(cors());
 
 // User Routes
 app.use('/api', userRoutes);
