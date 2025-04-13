@@ -31,7 +31,6 @@ export const getAllBeds = async (req: Request, res: Response): Promise<Response>
   }
 };
 
-// PUT - Update an existing bed by ID
 export const updateBed = async (req: Request, res: Response): Promise<Response> => {
   const { id } = req.params;
   const { name, status, type, updatedBy } = req.body;
